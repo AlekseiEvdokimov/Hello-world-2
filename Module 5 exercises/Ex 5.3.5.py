@@ -4,4 +4,5 @@ def rec_sum_n(n):
         return n
     return n%10 + rec_sum_n(n//10)
 
+
 print(rec_sum_n(12))
