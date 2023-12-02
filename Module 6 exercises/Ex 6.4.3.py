@@ -30,3 +30,11 @@ print(quadratic_solve(0, 0, 0))
 print(type(quadratic_solve(2, 2, 2)))
 print(type(quadratic_solve(1, -4, 4)))
 print(type(quadratic_solve(1, 3, -4)))
+
+M = {'a': 1, 'b': 3, 'c': -4}
+print(type(M))
+print(quadratic_solve(**M))
+
+L = [1, 3, -4]
+print(type(L))
+print(quadratic_solve(*L))
