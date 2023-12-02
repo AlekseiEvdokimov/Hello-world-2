@@ -6,11 +6,12 @@ def discriminant(a, b, c):
 
 
 def quadratic_solve(a, b, c):
-    if discriminant(a, b, c) < 0:
+    D = discriminant(a, b, c)
+    if D < 0:
         return "Нет вещественных корней"
-    elif discriminant(a, b, c) > 0:
-        x1 = (-b - discriminant(a, b, c)**0.5)/(2*a)
-        x2 = (-b + discriminant(a, b, c)**0.5)/(2*a)
+    elif D > 0:
+        x1 = (-b - D**0.5)/(2*a)
+        x2 = (-b + D**0.5)/(2*a)
         return x1, x2
     else:
         x = -b / (2 * a)
