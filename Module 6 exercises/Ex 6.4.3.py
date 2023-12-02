@@ -6,21 +6,26 @@ def discriminant(a, b, c):
 
 
 def quadratic_solve(a, b, c):
-    D = discriminant(a, b, c)
-    if D < 0:
-        return "Нет вещественных корней"
-    elif D > 0:
-        x1 = (-b - D**0.5)/(2*a)
-        x2 = (-b + D**0.5)/(2*a)
-        return x1, x2
+    if a and b and c:
+        D = discriminant(a, b, c)
+        if D < 0:
+            return "Нет вещественных корней"
+        elif D > 0:
+            x1 = (-b - D**0.5)/(2*a)
+            x2 = (-b + D**0.5)/(2*a)
+            return x1, x2
+        else:
+            x = -b / (2 * a)
+            return x
     else:
-        x = -b / (2 * a)
-        return x
+        return "Уравнение неквадратное"
 
 
 print(quadratic_solve(2, 2, 2))
 print(quadratic_solve(1, -4, 4))
 print(quadratic_solve(1, 3, -4))
+
+print(quadratic_solve(0, 0, 0))
 
 print(type(quadratic_solve(2, 2, 2)))
 print(type(quadratic_solve(1, -4, 4)))
