@@ -6,7 +6,7 @@ def discriminant(a, b, c):
 
 
 def quadratic_solve(a, b, c):
-    if a and b and c:
+    if a:
         D = discriminant(a, b, c)
         if D < 0:
             return "Нет вещественных корней"
@@ -25,7 +25,7 @@ print(quadratic_solve(2, 2, 2))
 print(quadratic_solve(1, -4, 4))
 print(quadratic_solve(1, 3, -4))
 
-print(quadratic_solve(0, 0, 0))
+print(quadratic_solve(2, 0, 1))
 
 print(type(quadratic_solve(2, 2, 2)))
 print(type(quadratic_solve(1, -4, 4)))
